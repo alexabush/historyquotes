@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>History Quotes</title>
+    <link rel='stylesheet' href='/stylesheets/style.css'/>
+
+</head>
+<body>
+<header>
+        <h1>Quotes</h1>
+        <p>Welcome to Quotes</p>
+</header>
+<main>
+    <article>
+        <ul class="quotes">
+            <% for (var i = 0; i < quotes.length; i++) { %>
+            <li class="quote">
+                <span><%= quotes[i].name %>:</span>
+                <span>"<%= quotes[i].quote %>"</span>
+                <span><%= quotes[i].source %></span>
+            </li>
+            <% } %>
+        </ul>
+
+        <div id="addquote">
+            <h2>Add Quote</h2>
+            <form action="/quotes" method="POST">
+                 <input type="text" placeholder="Quote to Add" name="quote">
+                 <input type="text" placeholder="Name" name="name">
+                 <input type="text" placeholder="Source" name="source">
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+        
+        <div id="deletequote">
+            <h2>Delete quote</h2>
+            <button id="delete">Delete Last Quote</button>
+        </div>
+    </article>
+    
+</main>
+<script src="script.js"></script>
+</body>
+</html>
