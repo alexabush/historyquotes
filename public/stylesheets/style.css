@@ -49,8 +49,9 @@ table {
 body {
   margin: 0 auto;
   max-width: 1000px;
-  font: 24px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font: 28px "Lucida Grande", Helvetica, Arial, sans-serif;
   border: 1px solid #ffb300;
+  height: 550px;
 }
 
 a {
@@ -70,12 +71,14 @@ header h1 {
 
 main {
 	background-color: #ffb300;
+	height: 100%;
 }
 
 article {
 	background-color: white;
 	padding: 30px;
 	margin: 0 150px;
+	height: 100%;
 }
 
 li.quote {
